@@ -33,6 +33,8 @@ android {
 }
 
 dependencies {
+    implementation "androidx.fragment:fragment-ktx:1.3.3"
+    implementation "androidx.fragment:activity-ktx:1.3.3"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'
