@@ -12,6 +12,8 @@
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
 
+        android:transitionGroup="true"
+
         android:layout_width="0dp"
         android:layout_height="0dp"
 
@@ -28,6 +30,8 @@
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:transitionName="fab-transition"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

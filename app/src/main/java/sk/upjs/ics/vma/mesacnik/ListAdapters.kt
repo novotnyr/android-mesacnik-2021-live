@@ -19,7 +19,9 @@ class StringViewHolder(itemView: View, onStringClickListener: OnStringClickListe
     }
 
     fun bind(value: String) {
-        textView.text = value;
+        textView.text = value
+        // nazov prechodu (Transition) je podľa textu na textovom políčku
+        textView.transitionName = value
     }
 }
 
