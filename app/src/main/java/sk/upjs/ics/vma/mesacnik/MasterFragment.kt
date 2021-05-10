@@ -1,8 +1,9 @@
 package sk.upjs.ics.vma.mesacnik
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -19,7 +20,11 @@ class MasterFragment : Fragment(R.layout.fragment_master) {
 
         recyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.adapter = StringAdapter { text, textView ->
-            TODO("Obsluzit klik na polozku adaptera")
+            parentFragmentManager.commit {
+                setReorderingAllowed(true)
+                replace(R.id.activity_main, DetailFragment.create(text), DETAIL_FRAGMENT_TAG)
+                addToBackStack(DETAIL_FRAGMENT_TAG)
+            }
         }.apply {
             submitList(months)
         }

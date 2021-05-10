@@ -1,16 +1,13 @@
 package sk.upjs.ics.vma.mesacnik
 
-import android.graphics.Color
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.View
 import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import com.google.android.material.textfield.TextInputLayout
-import com.google.android.material.transition.MaterialContainerTransform
 
 private const val TEXT_ARG = "text"
+const val DETAIL_FRAGMENT_TAG = "Detail"
 
 class DetailFragment : Fragment(R.layout.fragment_detail) {
     private lateinit var detailTextView: TextView
